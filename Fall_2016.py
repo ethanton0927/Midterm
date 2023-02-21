@@ -105,3 +105,6 @@ def multiadder(n):
         return lambda x: x
     else:
         return lambda a: lambda b: multiadder(n-1)(a+b)
+    
+#Question 5b.
+compose1(multiadder(4)(1000), multiadder(3)(10)(1000)(1)(2)(3))

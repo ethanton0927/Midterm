@@ -73,6 +73,10 @@ def find_digit(n, d):
         i = i + 1
     return k
 
+#Question 3b. 
+f = lambda x: find_digit(234567, x)
+compose1(f, f)(y) == y
+
 #Question 4.
 def luhn_sum(n):
     def luhn_digit(digit):

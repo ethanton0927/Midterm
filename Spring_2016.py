@@ -129,3 +129,15 @@ def pred_maze(x0, y0, open, exit):
         else:
             return "dead end"
     return maze
+
+#Question 6b.
+def path_out(M):
+    for dir in ["south", "west"]:
+        next = M(dir)
+        if next == "exit":
+            return dir + " "
+        elif next != "dead end":
+            rest_of_path = path_out(next)
+            if rest_of_path:
+                return dir + " " + rest_of_path
+    return None
